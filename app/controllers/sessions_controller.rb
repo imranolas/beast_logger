@@ -1,7 +1,7 @@
 class SessionsController < ApplicationController
   
   def index
-    @sessions = Session.order(:created_at)
+    @sessions = current_user.sessions.order(:created_at)
   end
 
   def create
