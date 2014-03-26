@@ -12,16 +12,16 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :grade %><br />
     <%= f.number_field :grade, value: 0, class: 'dial', data: { min: 0, max: 15, angleArc: 350, angleOffset: 185, } %>
-  </div>
+      <%= f.label :grade %><br />
+</div>
   <div class="field">
-    <%= f.label :difficulty %><br />
     <%= f.number_field :difficulty, value: 0, class: 'dial', data: { min: 0, max: 10, angleArc: 350, angleOffset: 185, } %>
+    <%= f.label :difficulty %><br />
   </div>
   <div class="field">
-    <%= f.label :steepness %><br />
     <%= f.number_field :steepness, value: 0, class: 'dial', data: { min: 0, max: 180, step: 5, angleArc: 180, angleOffset: 90, rotation: 'anticlockwise' } %>
+    <%= f.label :steepness %><br />
   </div>
   <div class="state">
     <%= f.radio_button( :state, "flash") %><label class='state_label' for="climb_state_flash"><span>Flash</span></label>
