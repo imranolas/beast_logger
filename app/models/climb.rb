@@ -6,7 +6,7 @@ class Climb < ActiveRecord::Base
   validates :grade, presence: true
   validates :state, presence: true
   validates :steepness, presence: true
-  validates :session_id, presence: true
+  # validates :session_id, presence: true
 
   scope :flash, where(state: 'flash')
   scope :redpoint, where(state: 'RP')
