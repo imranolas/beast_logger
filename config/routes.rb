@@ -1,4 +1,12 @@
 BeastLogger::Application.routes.draw do
+  resources :climbs
+
+
+  resources :sessions
+
+
+  devise_for :users
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

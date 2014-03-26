@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  grade: MyString
+  difficulty: 1
+  steepness: 1
+  state: MyString
+
+two:
+  grade: MyString
+  difficulty: 1
+  steepness: 1
+  state: MyString
