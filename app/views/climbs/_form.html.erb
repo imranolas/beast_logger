@@ -13,25 +13,33 @@
 
   <div class="field">
     <%= f.label :grade %><br />
-    <%= f.text_field :grade %>
+    <%= f.number_field :grade, class: 'dial', data: { min: 0, max: 15 } %>
   </div>
   <div class="field">
-    <%= f.label :session %><br />
-    <%= f.text_field :session %>
+    <%= f.label :session_id %><br />
+    <%= f.text_field :session_id %>
   </div>
   <div class="field">
     <%= f.label :difficulty %><br />
-    <%= f.number_field :difficulty %>
+    <%= f.number_field :difficulty, class: 'dial', data: { min: 0, max: 10 } %>
   </div>
   <div class="field">
     <%= f.label :steepness %><br />
-    <%= f.number_field :steepness %>
+    <%= f.number_field :steepness, class: 'dial', data: { min: 0, max: 180, step: 5, angleArc: 180, angleOffset: 90, rotation: 'anticlockwise' } %>
   </div>
   <div class="field">
     <%= f.label :state %><br />
-    <%= f.text_field :state %>
+    <%= f.radio_button( :state, "flash") %>Flash
+    <%= f.radio_button( :state, "RP") %>RP
+    <%= f.radio_button( :state, "fail") %>Fail
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+
+<script>
+  $(function() {
+      $(".dial").knob();
+  });
+</script>
