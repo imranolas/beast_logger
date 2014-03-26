@@ -18,8 +18,8 @@
   margin: 40px auto;
   width: 400px;
   border-radius: 30px;
-  padding-bottom: 25px;
-  padding-top: 20px;
+  padding-bottom: 12px;
+  padding-top: 8px;
   font-size: 22px;
   text-align: center;
   font-family: Futura;
@@ -27,7 +27,8 @@
 
 #glory_bar {
   margin: 0 auto;
-  max-width: 500px;
+  width: 500px;
+  background-color: #eee;
   text-align: center;
 }
 
@@ -39,8 +40,8 @@
   border-radius: 30px;
   font-size: 25px;
 
-  padding-bottom: 30px;
-  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-top: 40px;
   text-align: center;
 }
 
@@ -111,7 +112,7 @@ a {
 }
 
 .state {
-  margin: 20px 0;
+  margin: 60px 0;
 
 }
 
@@ -135,8 +136,8 @@ input[type=radio], input[type=checkbox] {
 input[type=radio] + label, input[type=checkbox] + label {
     display:inline-block;
     margin:-2px;
-    padding: 15px 12px 8px 12px;
-    margin-bottom: 0;
+    padding: 25px 12px 8px 12px;
+    
     font-size: 30px;
     line-height: 20px;
     color: #333;
@@ -163,10 +164,12 @@ input[type=radio] + label, input[type=checkbox] + label {
 
   .state_label {
     max-width: 200px;
-    padding: 10px 15px;
+
+    padding: 50px 15px;
     background-color: #666;
     font-size: 50px;
     margin: 70px;
-    border-radius: 20px;
-    height: 50px;
+
+    border-radius: 30px;
+    height: 70px;
   }
