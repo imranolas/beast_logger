@@ -1,12 +1,15 @@
 BeastLogger::Application.routes.draw do
-
-
-  resources :sessions do
+  
+ resources :seshes do
     resources :climbs
   end
 
-
   devise_for :users
 
-  root to: 'sessions#index'
+
+ 
+
+
+
+  root to: 'home#index'
 end
