@@ -46,8 +46,13 @@
 
 .field a {
   color: #eee;
-
 }
+
+.field a:hover {
+  color: #aaa;
+}
+
+
 
 body {
   font-family: monaco, monospace;
