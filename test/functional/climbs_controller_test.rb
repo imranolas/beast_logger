@@ -1,7 +1,49 @@
 require 'test_helper'
 
 class ClimbsControllerTest < ActionController::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  setup do
+    @climb = climbs(:one)
+  end
+
+  test "should get index" do
+    get :index
+    assert_response :success
+    assert_not_nil assigns(:climbs)
+  end
+
+  test "should get new" do
+    get :new
+    assert_response :success
+  end
+
+  test "should create climb" do
+    assert_difference('Climb.count') do
+      post :create, climb: { difficulty: @climb.difficulty, grade: @climb.grade, state: @climb.state, steepness: @climb.steepness }
+    end
+
+    assert_redirected_to climb_path(assigns(:climb))
+  end
+
+  test "should show climb" do
+    get :show, id: @climb
+    assert_response :success
+  end
+
+  test "should get edit" do
+    get :edit, id: @climb
+    assert_response :success
+  end
+
+  test "should update climb" do
+    put :update, id: @climb, climb: { difficulty: @climb.difficulty, grade: @climb.grade, state: @climb.state, steepness: @climb.steepness }
+    assert_redirected_to climb_path(assigns(:climb))
+  end
+
+  test "should destroy climb" do
+    assert_difference('Climb.count', -1) do
+      delete :destroy, id: @climb
+    end
+
+    assert_redirected_to climbs_path
+  end
 end

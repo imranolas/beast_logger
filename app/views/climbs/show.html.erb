@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Grade:</b>
+  <%= @climb.grade %>
+</p>
+
+<p>
+  <b>Difficulty:</b>
+  <%= @climb.difficulty %>
+</p>
+
+<p>
+  <b>Steepness:</b>
+  <%= @climb.steepness %>
+</p>
+
+<p>
+  <b>State:</b>
+  <%= @climb.state %>
+</p>
+
+
+<%= link_to 'Edit', edit_climb_path(@climb) %> |
+<%= link_to 'Back', climbs_path %>
