@@ -20,6 +20,6 @@ test:
 
 production:
   adapter: postgresql
-  database: beast_logger_production
+  database: beastlogger_production
   pool: 5
   timeout: 5000
