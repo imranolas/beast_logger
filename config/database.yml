@@ -20,6 +20,6 @@ test:
 
 production:
   adapter: postgresql
-  database: beastlogger_production
+  encoding: unicode
+  database: beast_logger_production
   pool: 5
-  timeout: 5000
