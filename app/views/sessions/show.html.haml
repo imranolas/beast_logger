@@ -1,0 +1,45 @@
+= render 'shared/climb_form', locals: {climb: @climb, session: @session}
+
+#chart_div{style: "width: 100%; height: 500px;"}
+
+<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+:javascript
+
+  $('#new_climb').on('submit', function(ev){
+    ev.preventDefault()
+    var grade = $('#climb_grade').val()
+    var difficulty = $('#climb_difficulty').val()
+    var steepness = $('#climb_steepness').val()
+    var state = $('input[name="climb[state]"]:checked').val()
+
+    $.ajax({
+      url: $('#new_climb').attr('action'),
+      data: { climb: {
+        grade: grade,
+        difficulty: difficulty,
+        steepness: steepness,
+        state: state
+      }},
+      type: 'post',
+      dataType: 'json',
+      success: function(data) {
+        drawChart(undefined,data);
+      }
+    })
+  })
+  
+  google.load("visualization", "1", {packages:["corechart"]});
+        google.setOnLoadCallback(drawChart);
+        function drawChart(x,data_json) {
+          console.log(data_json);
+            var data = google.visualization.arrayToDataTable(data_json || #{@session.data.to_json});
+
+          var options = {
+            legend: { position: 'top', maxLines: 3 },
+            bar: { groupWidth: '75%' },
+            isStacked: true
+          };
+
+          var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
+          chart.draw(data, options);
+        }

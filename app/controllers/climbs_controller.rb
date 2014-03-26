@@ -41,11 +41,11 @@ class ClimbsController < ApplicationController
   # POST /climbs.json
   def create
     @climb = Climb.new(params[:climb])
-
     respond_to do |format|
       if @climb.save
-        format.html { redirect_to @climb, notice: 'Climb was successfully created.' }
-        format.json { render json: @climb, status: :created, location: @climb }
+        Session.find(params[:session_id]).climbs << @climb
+        format.html { redirect_to @climb.session, notice: 'Climb was successfully created.' }
+        format.json { render json: @climb.session.data.to_json, status: :created }
       else
         format.html { render action: "new" }
         format.json { render json: @climb.errors, status: :unprocessable_entity }

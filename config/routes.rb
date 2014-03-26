@@ -1,8 +1,9 @@
 BeastLogger::Application.routes.draw do
-  resources :climbs
 
 
-  resources :sessions
+  resources :sessions do
+    resources :climbs
+  end
 
 
   devise_for :users
