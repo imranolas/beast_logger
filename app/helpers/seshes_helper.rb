@@ -1,0 +1,2 @@
+module SeshesHelper
+end

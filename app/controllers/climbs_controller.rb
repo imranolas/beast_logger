@@ -43,9 +43,9 @@ class ClimbsController < ApplicationController
     @climb = Climb.new(params[:climb])
     respond_to do |format|
       if @climb.save
-        Session.find(params[:session_id]).climbs << @climb
-        format.html { redirect_to @climb.session, notice: 'Climb was successfully created.' }
-        format.json { render json: @climb.session.data.to_json, status: :created }
+        Sesh.find(params[:sesh_id]).climbs << @climb
+        format.html { redirect_to @climb.sesh, notice: 'Climb was successfully created.' }
+        format.json { render json: @climb.sesh.data.to_json, status: :created }
       else
         format.html { render action: "new" }
         format.json { render json: @climb.errors, status: :unprocessable_entity }

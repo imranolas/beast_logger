@@ -1,6 +1,6 @@
 class Climb < ActiveRecord::Base
-  belongs_to :session
-  attr_accessible :difficulty, :grade, :state, :steepness, :session_id
+  belongs_to :sesh
+  attr_accessible :difficulty, :grade, :state, :steepness, :sesh_id
 
   validates :difficulty, presence: true
   validates :grade, presence: true

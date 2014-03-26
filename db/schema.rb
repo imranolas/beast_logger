@@ -11,19 +11,28 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140326105215) do
+ActiveRecord::Schema.define(:version => 20140326202355) do
 
   create_table "climbs", :force => true do |t|
-    t.integer  "grade",      :limit => 255
-    t.integer  "session_id"
+    t.integer  "grade"
+    t.integer  "sesh_id"
     t.integer  "difficulty"
     t.integer  "steepness"
     t.string   "state"
-    t.datetime "created_at",                :null => false
-    t.datetime "updated_at",                :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
-  add_index "climbs", ["session_id"], :name => "index_climbs_on_session_id"
+  add_index "climbs", ["sesh_id"], :name => "index_climbs_on_session_id"
+
+  create_table "seshes", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "location"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "seshes", ["user_id"], :name => "index_seshes_on_user_id"
 
   create_table "sessions", :force => true do |t|
     t.integer  "user_id"

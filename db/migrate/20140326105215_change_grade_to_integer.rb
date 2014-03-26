@@ -1,9 +1,9 @@
 class ChangeGradeToInteger < ActiveRecord::Migration
   def up
-    change_column :climbs, :grade, :integer
+    execute 'ALTER TABLE climbs ALTER grade TYPE integer USING grade::int;'
   end
 
   def down
-    change_column :climbs, :grade, :string
+    # change_column :climbs, :grade, :string
   end
 end
