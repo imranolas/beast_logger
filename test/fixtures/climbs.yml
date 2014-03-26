@@ -2,12 +2,14 @@
 
 one:
   grade: MyString
+  session: 
   difficulty: 1
   steepness: 1
   state: MyString
 
 two:
   grade: MyString
+  session: 
   difficulty: 1
   steepness: 1
   state: MyString

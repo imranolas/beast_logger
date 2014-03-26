@@ -3,6 +3,7 @@
 <table>
   <tr>
     <th>Grade</th>
+    <th>Session</th>
     <th>Difficulty</th>
     <th>Steepness</th>
     <th>State</th>
@@ -14,6 +15,7 @@
 <% @climbs.each do |climb| %>
   <tr>
     <td><%= climb.grade %></td>
+    <td><%= climb.session %></td>
     <td><%= climb.difficulty %></td>
     <td><%= climb.steepness %></td>
     <td><%= climb.state %></td>
