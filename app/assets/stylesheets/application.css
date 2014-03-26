@@ -11,6 +11,20 @@
  *= require_self
  *= require_tree .
  */
+a {
+  text-decoration: none;
+  color: #eee;
+  padding: 15px;
+}
+
+a:hover {
+  color: #eee;
+}
+
+input {
+  height: 30px;
+  font-size: 15px;
+}
 
 .login {
   background-color: #444;
@@ -27,7 +41,7 @@
 
 #glory_bar {
   margin: 0 auto;
-  width: 500px;
+  width: 400px;
   background-color: #eee;
   text-align: center;
 }
@@ -62,7 +76,7 @@ body {
 }
 
 body {
-background: url("http://cdn.c.photoshelter.com/img-get2/I0000CoV4zZ.s.l0/fit=1000x750/rock-climbers-hands.jpg");
+background: url("http://www.coppatopphotos.com/img/s9/v14/p872528636-4.jpg");
 /* the follow is the code to have the image display as a full page */
 background-position: center;
 background-attachment: fixed;
@@ -103,10 +117,8 @@ h2 {
 
 }
 
-a {
-  text-decoration: none;
-  color: #000;
-}
+
+
 
 
 #new_climb .state_label {
@@ -127,7 +139,7 @@ input[type="submit"], .btn {
   padding: 20px;
   background-color: green;
   font-family: 'Verdana';
-  font-size: 40px;
+  font-size: 30px;
   width: 200px;
   height: 200px;
   border-radius: 100px;
@@ -180,3 +192,16 @@ input[type=radio] + label, input[type=checkbox] + label {
     border-radius: 30px;
     height: 70px;
   }
+
+  #new_user {
+    max-width: 300px;
+    margin: 20px auto;
+    background-color: #666;
+    font-size: 20px;
+    color: #eee;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  
+
