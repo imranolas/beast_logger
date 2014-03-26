@@ -14,13 +14,13 @@
 ActiveRecord::Schema.define(:version => 20140326105215) do
 
   create_table "climbs", :force => true do |t|
-    t.integer  "grade",      :limit => 255
+    t.integer  "grade"
     t.integer  "session_id"
     t.integer  "difficulty"
     t.integer  "steepness"
     t.string   "state"
-    t.datetime "created_at",                :null => false
-    t.datetime "updated_at",                :null => false
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   add_index "climbs", ["session_id"], :name => "index_climbs_on_session_id"
