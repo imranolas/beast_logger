@@ -7,6 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+ <div class='login'>
+  <% if current_user %>
+    <%= current_user.email %>
+    <%= link_to 'log out', destroy_user_session_path, method: :delete %>
+  <% else %>
+    <%= link_to 'sign in', new_user_session_path %>
+    <%= link_to 'register', new_user_registration_path %>
+  <% end %>
+</div> 
+
+<div id="glory_bar">
+  <h1>Welcome to <span>beast logger</span></h1><br>
+</div>
+
+
+
 <div id="main">
 
   <%= yield %>

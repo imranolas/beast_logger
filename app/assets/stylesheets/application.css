@@ -12,11 +12,63 @@
  *= require_tree .
  */
 
+.login {
+  background-color: #444;
+  color: #eee;
+  margin: 40px auto;
+  width: 400px;
+  border-radius: 30px;
+  padding-bottom: 30px;
+  padding-top: 10px;
+  text-align: center;
+  font-family: Futura;
+}
+
+#glory_bar {
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: center;
+}
+
+.field {
+  background-color: #444;
+  color: #eee;
+  margin: 40px auto;
+  width: 400px;
+  border-radius: 30px;
+  font-size: 25px;
+  padding-bottom: 30px;
+  padding-top: 10px;
+}
+
 body {
-  font-family: 'Verdana';
+  font-family: monaco, monospace;
   font-size: 16px;
   box-sizing: border-box;
 }
+
+body {
+background: url("http://cdn.c.photoshelter.com/img-get2/I0000CoV4zZ.s.l0/fit=1000x750/rock-climbers-hands.jpg");
+/* the follow is the code to have the image display as a full page */
+background-position: center;
+background-attachment: fixed;
+-webkit-background-size: cover; /* the next 3 lines are "browser prefixes", they are necessary to include for CSS3 techniques */
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+
+h1, h2 {
+  display: inline-block;
+  background: #eee;
+}
+h1 {
+  font-size: 30px;
+}
+h2 {
+  font-size: 20px;
+}
+
 
 #main {
   /*width: 55%;*/
@@ -50,12 +102,15 @@ body {
 
 input[type="submit"], .btn {
   border: 0;
-  border-bottom: 2px solid #888;
+  border-bottom: 4px solid #222;
   padding: 10px;
-  background-color: #ddd;
+  background-color: green;
   font-family: 'Verdana';
-  font-size: 16px;
-  width: 300px;
+  font-size: 40px;
+  width: 200px;
+  height: 200px;
+  border-radius: 100px;
+  margin: 10px 0 60px 0;
 }
 
 input[type=radio], input[type=checkbox] {
@@ -65,9 +120,9 @@ input[type=radio], input[type=checkbox] {
 input[type=radio] + label, input[type=checkbox] + label {
     display:inline-block;
     margin:-2px;
-    padding: 4px 12px;
+    padding: 15px 12px 8px 12px;
     margin-bottom: 0;
-    font-size: 14px;
+    font-size: 30px;
     line-height: 20px;
     color: #333;
     text-align: center;
@@ -93,3 +148,14 @@ input[type=radio] + label, input[type=checkbox] + label {
     box-shadow: inset 0 2px 4px rgba(0,0,0,0.15),0 1px 2px rgba(0,0,0,0.05);
       background-color:#e0e0e0;
   }
+  .state_label {
+    max-width: 200px;
+    padding: 10px 15px;
+    background-color: #666;
+    font-size: 50px;
+    margin: 70px;
+    border-radius: 20px;
+    height: 50px;
+  }
+
+
