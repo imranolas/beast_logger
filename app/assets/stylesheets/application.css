@@ -88,6 +88,12 @@ h2 {
 
 }
 
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+
 #new_climb .state_label {
   display: inline-block;
   width: 31%;
